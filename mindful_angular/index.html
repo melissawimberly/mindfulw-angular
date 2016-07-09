@@ -12,19 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<!-- <div class="main" ng-view></div> -->
-	<div class="main" ng-controller='MyController'>
-		<ul class="postList">
-		<li class="post cf" ng-repeat="item in posts">
-			<img ng-src="images/{{item.pictureName}}.jpg" alt="Photo of {{item.postName}}">
-			<div class="info">
-				<h1>{{item.postName}}</h1>
-				<h1>{{item.subtitle}}</h1>
-			</div>
-		</li>
-			
-		</ul>
-		
+	<div class="main" ng-view></div>
 	</div>
 </body>
 </html>
