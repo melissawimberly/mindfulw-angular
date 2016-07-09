@@ -1,0 +1,33 @@
+<section class="postpage">
+	<div class="search">
+		<h1>Post Directory</h1>
+		<label>search: </label>
+		<input ng-model="query" placeholder="Search for posts" autofocus>
+		<label class="formgroup">by:
+			<select ng-model="postOrder">
+				<option value="postName">Post</option>
+				<option value="subtitle">subtitle</option>
+			</select>
+		</label>
+
+		<label class="formgroup">ascending
+			<input type="radio" ng-model="direction" name="direction" checked>
+		</label>
+		<label class="formgroup">descending	
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
+
+		</label>
+	</div>
+
+	<ul class="postlist" ng-show="query">
+		<li ng-animate="animate" class="post cf" ng-repeat="item in posts | filter:query | orderBy: postOrder:direction">
+			<a href="#/details/{{posts.indexOf(item)}}">
+				<img ng-src="images/{{item.postName}}.jpg" alt="Photo of {{item.postName}}">	
+				<div>
+					<h2>{{item.postName}}</h2>
+					<h3>{{item.subtitle}}</h3>
+				</div>	
+			</a>		
+		</li>
+	</ul>
+</section>
