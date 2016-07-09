@@ -12,6 +12,18 @@ postControllers.controller('DetailsController', ["$scope", "$http", "$routeParam
 	$http.get('js/data.json').success(function(data){
 		$scope.posts = data;
 		$scope.whichItem = $routeParams.itemId;
+
+		if($routeParams.itemId > 0){
+			$scope.prevItem = Number($routeParams.itemId) - 1;
+		}else{
+			$scope.prevItem = $scope.posts.length - 1;
+		}
+
+		if($routeParams.itemId < $scope.posts.length - 1){
+			$scope.nextItem = Number($routeParams.itemId) + 1;
+		}else{
+			$scope.nextItem = 0;
+		}
 	});
 	 
 }]);
