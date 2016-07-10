@@ -72,12 +72,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html {
-  background-color: #023E54; 
+  /*background-color: #023E54; 
   background-image: url(images/fallback-gradient.png); 
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#023E54), to(#10AAC0));
   background-image: -webkit-linear-gradient(top, #023E54, #10AAC0); 
   background-image: -moz-linear-gradient(top, #023E54, #10AAC0);
-  background-image: -o-linear-gradient(top, #023E54, #10AAC0);
+  background-image: -o-linear-gradient(top, #023E54, #10AAC0);*/
   min-height: 100%;
   height: auto;
 }
@@ -133,8 +133,27 @@ a.small {
   line-height: 100%;
   font-size: .9rem;
 }
-
-
+/* Header */
+#heading{
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+#title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+#slogan{
+  text-align: center;
+  font-style: italic;
+}
+.navigationBar{
+margin: 15px auto;
+}
+.navigationBar li{
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+}
 /* Search Styles */
 
 .search {
@@ -228,6 +247,21 @@ a.small {
 }
 
 /* Artist List Styles */
+.features{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.features img {
+  display: inline-block;
+  max-width: 30%;
+  max-height: 285px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
 .postlist {
   background: #EEE8D5;
