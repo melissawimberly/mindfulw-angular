@@ -134,6 +134,15 @@ a.small {
   font-size: .9rem;
 }
 /* Header */
+.logo img{
+  width: 50px;
+}
+.nav{
+  float: right;
+}
+.nav li{
+  display: inline-block;
+}
 #heading{
   border-bottom: 2px solid black;
   border-top: 2px solid black;
@@ -246,7 +255,7 @@ margin: 15px auto;
   outline: 0;
 }
 
-/* Artist List Styles */
+/* Post List Styles */
 .features{
   display: block;
   margin: 0 auto;
@@ -297,6 +306,12 @@ margin: 15px auto;
   text-decoration: none;
 }
 
+li.post {
+  width: 75%;
+}
+li.post a{
+  text-decoration: none;
+ } 
 .postlist li:hover {
   background: #FDF6E3;
   opacity: 1;
@@ -309,7 +324,7 @@ margin: 15px auto;
 .post img {
   display: block;
   float: left;
-  width: 60px;
+  width: 30%;
   -webkit-border-radius: 12px;
   border-radius: 12px;
   margin-right: 10px;
